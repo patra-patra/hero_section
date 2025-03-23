@@ -7,19 +7,140 @@
 
 body {
     font-family: 'Bricolage Grotesque', sans-serif;
-    margin: 0; /* Убираем отступы по умолчанию */
-    height: 100vh; /* Высота body равна высоте экрана */
-    display: flex;
-    justify-content: center; /* Центрирование по горизонтали */
-    align-items: center; /* Центрирование по вертикали */
+    margin: 0;
+    background: #A8DADC;
+    text-align: center;
 }
 
-.main {
-    background: antiquewhite;
-    width: 900px;
-    height: 500px;
+.container {
+    font-family: 'Bricolage Grotesque', sans-serif;
+    background: white;
+    margin: 40px auto;
+    width: 1450px;
+    border-radius: 20px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px 20px 20px 100px; /* Увеличиваем отступ слева до 100px */
+    box-sizing: border-box; /* Учитываем padding в общей ширине */
+}
+
+.icon {
+    width: 20px;
+}
+
+.navbar {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
+    padding: 20px;
+    background: white;
+    border-radius: 20px 20px 0 0;
+    max-width: 100%; /* Ограничиваем ширину навигации */
+    margin: 0 auto; /* Центрируем навигацию */
+    padding-left: 50px; /* Добавляем отступ слева, чтобы выровнять с заголовком */
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 5px; /* Расстояние между иконкой и текстом */
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: black;
+    font-weight: normal;
+}
+
+.contact-btn {
+    border: 1px solid black;
+    background: white;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 20px;
+}
+
+.hero {
+    display: flex;
+    justify-content: space-between; /* Распределяем пространство между контентом и изображением */
+    align-items: center;
+    padding: 50px;
+    max-width: 100%; /* Ограничиваем ширину hero */
+    margin: 0 auto; /* Центрируем hero */
+    padding-left: 50px; /* Добавляем отступ слева, чтобы выровнять с заголовком */
+}
+
+.hero-content {
+    text-align: left;
+    max-width: 500px;
+}
+
+h1 {
+    font-size: 48px;
+    font-weight: bold;
+    margin: 0;
+}
+
+.buttons {
+    margin: 20px 0;
+}
+
+.book-btn {
+    background: yellow;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 20px;
+}
+
+.services {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.service-item {
+    background: white;
+    padding: 10px 15px;
     border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.hero-image {
+    position: relative;
+}
+
+.hero-image img {
+    width: 300px;
+}
+
+.play-button {
+    position: absolute;
+    bottom: 10px;
+    right: 20px;
+    background: yellow;
+    padding: 10px;
+    border-radius: 50%;
+    font-weight: bold;
+}
+
+footer {
+    margin-top: 20px;
+}
+
+.social-links a {
+    text-decoration: none;
+    margin: 0 10px;
+    color: black;
+    font-weight: bold;
 }
