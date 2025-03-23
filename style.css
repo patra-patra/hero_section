@@ -1,0 +1,25 @@
+﻿@font-face {
+    font-family: 'Bricolage Grotesque';
+    src: url('fonts/BricolageGrotesque-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+body {
+    font-family: 'Bricolage Grotesque', sans-serif;
+    margin: 0; /* Убираем отступы по умолчанию */
+    height: 100vh; /* Высота body равна высоте экрана */
+    display: flex;
+    justify-content: center; /* Центрирование по горизонтали */
+    align-items: center; /* Центрирование по вертикали */
+}
+
+.main {
+    background: antiquewhite;
+    width: 900px;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+}
