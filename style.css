@@ -262,9 +262,14 @@ footer {
 
 .cloud {
     position: absolute;
-    right: -50px;
-    bottom: 0;
-    width: 500px;
+    right: -150px; /* Уводим облако дальше за контейнер */
+    bottom: -50px; /* Опускаем вниз */
+    width: 570px; /* Увеличиваем размер облака */
     z-index: 2;
-    transition: transform 0.1s ease-out;
+    transition: transform 0.6s ease-out;
+    pointer-events: none; /* Чтобы мышка не влияла на облако */
+}
+
+body:hover .cloud {
+    transform: translateX(10px) translateY(5px);
 }
