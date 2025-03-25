@@ -253,17 +253,40 @@ h1 {
         background: rgba(87, 175, 200, 1);
     }
 
-footer {
-    margin-top: 20px;
+.social-container {
+    position: absolute;
+    bottom: 40px;
+    right: 70px;
+    z-index: 4;
 }
 
-.social-links a {
-    text-decoration: none;
-    margin: 0 10px;
-    color: black;
-    font-weight: bold;
+.social-links {
+    display: flex;
+    gap: 12px;
 }
 
+    .social-links a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 36px;
+        height: 36px;
+        background: white;
+        border-radius: 50%;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        text-decoration: none;
+        color: #ff843d;
+        font-weight: bold;
+        font-size: 14px;
+        transition: all 0.3s ease;
+    }
+
+        .social-links a:hover {
+            background: #ffd52b;
+            color: white;
+            transform: translateY(-3px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
 .cloud {
     position: absolute;
     right: -150px; /* Уводим облако дальше за контейнер */
