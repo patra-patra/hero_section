@@ -32,3 +32,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
     updateCarousel(); // Начальное обновление
 });
+
+document.addEventListener('DOMContentLoaded', () => {
+    const cloud = document.querySelector('.cloud');
+
+    window.addEventListener('scroll', () => {
+        let scrollPosition = window.scrollY;
+        cloud.style.transform = `translateX(${scrollPosition * 0.2}px)`; // Регулируй множитель для эффекта
+    });
+});
