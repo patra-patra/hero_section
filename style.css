@@ -8,7 +8,7 @@
 body {
     font-family: 'Bricolage Grotesque', sans-serif;
     margin: 0;
-    background: #76cae3;
+    background: url('pictures/blue_lines.png') no-repeat center center / cover;
 }
 
 span {
@@ -24,12 +24,13 @@ p {
 }
 
 .container {
-    background: white;
+    background: url('pictures/background.png') no-repeat center center / cover;
     margin: 20px auto;
+    margin-top: 50px;
     width: 1250px;
     border-radius: 20px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    padding: 20px 50px 0 100px; /* Увеличиваем правый padding с 0 до 50px */
+    padding: 20px 50px 0 100px;
     box-sizing: border-box;
     position: relative;
     overflow: hidden;
@@ -170,53 +171,57 @@ h1 {
     font-weight: bold;
 }
 
-/* Обновленные стили карусели */
+/*карусель */
 .carousel {
     position: relative;
     width: 100%;
-    max-width: 395px;
-    margin: 5px auto 0;
-    margin-bottom: 50px;
+    max-width: 374px; /* Ширина для 4 элементов с отступами */
+    margin: 5px auto 50px;
+    margin-left: 5px;
+    padding-bottom: 10px;
 }
 
 .carousel-track-container {
     overflow: hidden;
+    width: 100%;
 }
 
 .carousel-track {
     display: flex;
     transition: transform 0.5s ease;
-    gap: 10px;
-    padding: 5px 0;
+    gap: 12px;
+    padding: 10px 15px; /* Увеличили боковые отступы */
+    width: fit-content; /* Ширина по содержимому */
+    margin: 0 auto; /* Центрирование */
 }
 
 .carousel-slide {
-    flex: 0 0 90px;
-    height: 90px;
+    flex: 0 0 80px; /* Квадратные элементы */
+    height: 80px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     background: white;
-    border-radius: 20px;
+    border-radius: 15px; /* Чуть меньше радиус */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
 }
-
     .carousel-slide img {
-        width: 35px;
+        width: 30px; /* Чуть уменьшили иконки */
         height: 30px;
         object-fit: contain;
         margin-bottom: 5px;
     }
 
+
 .service-item {
-    font-size: 12px;
+    font-size: 11px; /* Чуть уменьшили текст */
     font-weight: bold;
     padding: 0 3px;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-    max-width: 80px;
+    max-width: 70px;
 }
 
 .carousel-button {
@@ -225,7 +230,7 @@ h1 {
     transform: translateY(-50%);
     width: 25px;
     height: 25px;
-    background: rgba(118, 202, 227, 0.9);
+    background: rgba(118, 202, 227, 0.7);
     color: white;
     border: none;
     border-radius: 50%;
@@ -238,13 +243,12 @@ h1 {
 }
 
     .carousel-button.prev {
-        left: -15px;
+        left: -5px;
     }
 
     .carousel-button.next {
         right: -15px;
     }
-
     .carousel-button:hover {
         background: rgba(87, 175, 200, 1);
     }
