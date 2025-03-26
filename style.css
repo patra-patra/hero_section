@@ -81,8 +81,26 @@ nav ul {
         font-weight: lighter;
     }
 
-.contact-btn {
+.auth-contact-wrapper {
     margin-left: auto;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.auth-icon {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+    .auth-icon:hover {
+        transform: scale(1.1);
+    }
+
+/* Обновите стиль для contact-btn, чтобы убрать margin-left */
+.contact-btn {
     border: 1px solid black;
     background: white;
     padding: 10px 20px;
