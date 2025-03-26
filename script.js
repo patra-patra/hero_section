@@ -42,7 +42,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const mouseX = e.clientX - rect.left; // Позиция мыши внутри контейнера
         const centerX = rect.width / 2; // Центр контейнера
 
-        const moveAmountX = (mouseX - centerX) * 0.04; // Уменьшил коэффициент в 2 раза
+        const moveAmountX = (mouseX - centerX) * 0.04; 
 
         const x = (e.clientX / window.innerWidth - 0.5) * 2; 
         const y = (e.clientY / window.innerHeight - 0.5) * 1;

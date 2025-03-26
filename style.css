@@ -28,15 +28,15 @@ p {
     margin: 20px auto;
     margin-top: 50px;
     width: 1250px;
-    min-height: 80vh; /* Добавляем минимальную высоту */
+    min-height: 80vh; 
     border-radius: 20px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     padding: 20px 50px 0 100px;
     box-sizing: border-box;
     position: relative;
     overflow: hidden;
-    display: flex; /* Добавляем flex */
-    flex-direction: column; /* Столбцовая организация контента */
+    display: flex; 
+    flex-direction: column;
 }
 
 .navbar {
@@ -433,7 +433,7 @@ text {
 @media (max-width: 1440px) {
     .container {
         width: 90%;
-        min-height: 90vh; /* Адаптивная минимальная высота */
+        min-height: 90vh; 
     }
 }
 
@@ -469,8 +469,8 @@ text {
         display: none;
     }
     .container {
-        min-height: auto; /* На маленьких экранах можно убрать фиксированную высоту */
-        padding-bottom: 50px; /* Добавляем отступ снизу */
+        min-height: auto; 
+        padding-bottom: 50px; 
     }
 
     .social-container {
