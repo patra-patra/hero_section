@@ -24,16 +24,19 @@ p {
 }
 
 .container {
-    background: url('pictures/background.png') no-repeat center center;
+    background: url('pictures/background.png') no-repeat center center / cover;
     margin: 20px auto;
     margin-top: 50px;
     width: 1250px;
+    min-height: 80vh; /* Добавляем минимальную высоту */
     border-radius: 20px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     padding: 20px 50px 0 100px;
     box-sizing: border-box;
     position: relative;
     overflow: hidden;
+    display: flex; /* Добавляем flex */
+    flex-direction: column; /* Столбцовая организация контента */
 }
 
 .navbar {
@@ -224,17 +227,17 @@ h1 {
     border-radius: 15px; 
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
 }
-    .carousel-slide img {
-        width: 80px;
-        height: 80px;
-        object-fit: cover;
-        border-radius: 10px;
-        margin-bottom: 5px;
-        width: 50px;
-        height: 40px;
-        object-fit: contain;
-        margin-bottom: 8px;
-    }
+     .carousel-slide img {
+         width: 80px;
+         height: 80px;
+         object-fit: cover;
+         border-radius: 10px;
+         margin-bottom: 5px;
+         width: 50px;
+         height: 40px;
+         object-fit: contain;
+         margin-bottom: 8px;
+     }
 
 
 .service-item {
@@ -425,3 +428,171 @@ text {
     }
 }
 
+/* Адаптивность для экранов до 1440px */
+
+@media (max-width: 1440px) {
+    .container {
+        width: 90%;
+        min-height: 90vh; /* Адаптивная минимальная высота */
+    }
+}
+
+
+/* Адаптивность для экранов до 1200px */
+@media (max-width: 1200px) {
+    .hero {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .hero-content {
+        max-width: 100%;
+        text-align: center;
+        margin-bottom: 30px;
+    }
+
+    .buttons {
+        justify-content: center;
+    }
+
+    .carousel {
+        margin: 20px auto;
+    }
+
+    /* Скрываем кота и облако */
+    .hero-image, .cloud {
+        display: none;
+    }
+
+    .circle-overlay {
+        display: none;
+    }
+    .container {
+        min-height: auto; /* На маленьких экранах можно убрать фиксированную высоту */
+        padding-bottom: 50px; /* Добавляем отступ снизу */
+    }
+
+    .social-container {
+        position: static;
+        margin: 20px auto;
+        display: flex;
+        justify-content: center;
+    }
+}
+
+/* Адаптивность для экранов до 992px */
+@media (max-width: 992px) {
+    .navbar {
+        flex-wrap: wrap;
+        gap: 20px;
+        justify-content: space-between;
+    }
+
+    nav ul {
+        order: 3;
+        width: 100%;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .auth-contact-wrapper {
+        margin-left: 0;
+    }
+
+    h1 {
+        font-size: 50px;
+        line-height: 1.2;
+    }
+}
+
+/* Адаптивность для экранов до 768px */
+@media (max-width: 768px) {
+    .container {
+        padding: 20px 30px;
+    }
+
+    .navbar {
+        padding: 15px 0;
+    }
+
+    h1 {
+        font-size: 40px;
+    }
+
+    .book-btn {
+        margin-right: 10px;
+        padding: 10px 15px;
+    }
+}
+
+/* Адаптивность для экранов до 576px */
+@media (max-width: 576px) {
+    .container {
+        padding: 15px 20px;
+        margin-top: 20px;
+    }
+
+    .logo-text {
+        font-size: 12px;
+    }
+
+    nav ul {
+        gap: 10px;
+        font-size: 10px;
+    }
+
+    .contact-btn {
+        padding: 8px 15px;
+    }
+
+    h1 {
+        font-size: 32px;
+    }
+
+    p {
+        font-size: 12px;
+    }
+
+    .carousel-slide {
+        flex: 0 0 70px;
+        height: 70px;
+    }
+
+    .service-item {
+        font-size: 9px;
+    }
+}
+
+/* Адаптивность для экранов до 400px */
+@media (max-width: 400px) {
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+
+    nav ul {
+        order: 0;
+        flex-wrap: wrap;
+    }
+
+    .auth-contact-wrapper {
+        width: 100%;
+        justify-content: center;
+    }
+
+    h1 {
+        font-size: 28px;
+    }
+
+    .buttons {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .book-btn {
+        margin-right: 0;
+        width: 100%;
+    }
+}
