@@ -44,11 +44,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
         const moveAmountX = (mouseX - centerX) * 0.04; // Уменьшил коэффициент в 2 раза
 
-        const x = (e.clientX / window.innerWidth - 0.5) * 2; // Еще сильнее уменьшил амплитуду по X
-        const y = (e.clientY / window.innerHeight - 0.5) * 1; // Еще сильнее уменьшил амплитуду по Y
+        const x = (e.clientX / window.innerWidth - 0.5) * 2; 
+        const y = (e.clientY / window.innerHeight - 0.5) * 1;
 
         // Ограничиваем движение облака в пределах контейнера
-        const maxMoveX = (rect.width - cloud.clientWidth) / 6; // Еще больше ограничил диапазон движения
+        const maxMoveX = (rect.width - cloud.clientWidth) / 6;
         const limitedMoveX = Math.max(-maxMoveX, Math.min(maxMoveX, moveAmountX));
 
         cloud.style.transform = `translate(${limitedMoveX + x}px, ${y}px)`;

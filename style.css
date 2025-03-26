@@ -24,7 +24,7 @@ p {
 }
 
 .container {
-    background: url('pictures/background.png') no-repeat center center / cover;
+    background: url('pictures/background.png') no-repeat center center;
     margin: 20px auto;
     margin-top: 50px;
     width: 1250px;
@@ -64,6 +64,7 @@ p {
 
 .icon {
     width: 20px;
+    margin-top: -7px;
 }
 
 nav ul {
@@ -99,7 +100,6 @@ nav ul {
         transform: scale(1.1);
     }
 
-/* Обновите стиль для contact-btn, чтобы убрать margin-left */
 .contact-btn {
     border: 1px solid black;
     background: white;
@@ -193,7 +193,7 @@ h1 {
 .carousel {
     position: relative;
     width: 100%;
-    max-width: 374px; /* Ширина для 4 элементов с отступами */
+    max-width: 374px; 
     margin: 5px auto 50px;
     margin-left: 5px;
     padding-bottom: 10px;
@@ -208,32 +208,37 @@ h1 {
     display: flex;
     transition: transform 0.5s ease;
     gap: 12px;
-    padding: 10px 15px; /* Увеличили боковые отступы */
-    width: fit-content; /* Ширина по содержимому */
-    margin: 0 auto; /* Центрирование */
+    padding: 10px 15px; 
+    width: fit-content; 
+    margin: 0 auto; 
 }
 
 .carousel-slide {
-    flex: 0 0 80px; /* Квадратные элементы */
+    flex: 0 0 80px; 
     height: 80px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     background: white;
-    border-radius: 15px; /* Чуть меньше радиус */
+    border-radius: 15px; 
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
 }
     .carousel-slide img {
-        width: 30px; /* Чуть уменьшили иконки */
-        height: 30px;
-        object-fit: contain;
+        width: 80px;
+        height: 80px;
+        object-fit: cover;
+        border-radius: 10px;
         margin-bottom: 5px;
+        width: 50px;
+        height: 40px;
+        object-fit: contain;
+        margin-bottom: 8px;
     }
 
 
 .service-item {
-    font-size: 11px; /* Чуть уменьшили текст */
+    font-size: 11px; 
     font-weight: bold;
     padding: 0 3px;
     white-space: nowrap;
@@ -305,14 +310,15 @@ h1 {
             transform: translateY(-3px);
             box-shadow: 0 4px 8px rgba(0,0,0,0.2);
         }
+
 .cloud {
     position: absolute;
-    right: -150px; /* Уводим облако дальше за контейнер */
-    bottom: -50px; /* Опускаем вниз */
-    width: 570px; /* Увеличиваем размер облака */
+    right: -150px; 
+    bottom: -50px; 
+    width: 570px; 
     z-index: 2;
     transition: transform 0.6s ease-out;
-    pointer-events: none; /* Чтобы мышка не влияла на облако */
+    pointer-events: none;
 }
 
 body:hover .cloud {
@@ -355,7 +361,6 @@ body:hover .cloud {
     height: 100px;
     position: absolute;
     animation: rotateText 6s linear infinite;
-    /* Отступ от центрального круга */
     transform: scale(1.2);
 }
 
@@ -399,7 +404,7 @@ text {
 }
 
 .right-eye {
-    left: 170px;
+    left: 175px;
 }
 
 @keyframes blink {
@@ -419,3 +424,4 @@ text {
         clip-path: inset(0% 0% 0% 0%);
     }
 }
+
