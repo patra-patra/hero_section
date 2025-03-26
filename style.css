@@ -256,7 +256,7 @@ h1 {
 .social-container {
     position: absolute;
     bottom: 40px;
-    right: 70px;
+    right: 90px;
     z-index: 4;
 }
 
@@ -269,15 +269,15 @@ h1 {
         display: flex;
         align-items: center;
         justify-content: center;
-        width: 36px;
-        height: 36px;
+        width: 28px;
+        height: 28px;
         background: white;
         border-radius: 50%;
         box-shadow: 0 2px 4px rgba(0,0,0,0.1);
         text-decoration: none;
         color: #ff843d;
         font-weight: bold;
-        font-size: 14px;
+        font-size: 11px;
         transition: all 0.3s ease;
     }
 
@@ -360,4 +360,44 @@ text {
     fill: black;
     text-transform: uppercase;
     letter-spacing: 0.1rem;
+}
+.cat {
+    position: relative;
+    display: inline-block;
+}
+
+.eye {
+    position: absolute;
+    width: 40px;
+    height: 30px;
+    background: #44403c;
+    border-radius: 50%;
+    top: 130px;
+    left: 65px;
+    overflow: hidden;
+    transform: rotate(180deg);
+    clip-path: inset(100% 0% 0% 0%);
+    animation: blink 4s infinite ease-in-out;
+}
+
+.right-eye {
+    left: 170px;
+}
+
+@keyframes blink {
+    0%, 94% {
+        clip-path: inset(100% 0% 0% 0%);
+    }
+
+    95% {
+        clip-path: inset(100% 0% 0% 0%); 
+    }
+
+    97% {
+        clip-path: inset(100% 0% 0% 0%); 
+    }
+
+    98%, 100% {
+        clip-path: inset(0% 0% 0% 0%);
+    }
 }
